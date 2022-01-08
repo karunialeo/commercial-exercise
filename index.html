@@ -8,31 +8,51 @@
 
     <!-- Developer CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/cart.css" />
   </head>
-  <body>
+  <body id="ecommerce-page">
+    <div class="cart-box-container dis-none" id="cart-box-container">
+      <h4>Cart</h4>
+      <hr />
+      <div class="cart-status" id="cart-status">
+        <div class="cart-empty-container">
+          <p>Your cart is empty.</p>
+        </div>
+      </div>
+    </div>
     <div class="body-container">
       <nav>
         <div class="nav-menu">
-          <img src="assets/img/logo.svg" alt="" />
+          <a href=""><img src="assets/img/logo.svg" alt="" /></a>
           <ul>
-            <li>Collections</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+              <a href="">Collections</a>
+            </li>
+            <li>
+              <a href="">Men</a>
+            </li>
+            <li>
+              <a href="">Women</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
           </ul>
         </div>
         <div class="nav-profile">
-          <img src="assets/img/icon-cart.svg" alt="cart" />
+          <img src="assets/img/icon-cart.svg" alt="cart" id="icon-cart" />
           <img src="assets/img/image-avatar.png" alt="" />
         </div>
       </nav>
 
       <hr />
 
-      <section class="main-content">
+      <section class="main-content" id="main-content">
         <div class="prod-images">
-          <div class="prod-hero-image">
+          <div class="prod-hero-image" id="prod-hero-image">
             <img src="assets/img/image-product-1.jpg" alt="image-prod-1" />
           </div>
           <div class="prod-thumbnails">
@@ -74,12 +94,24 @@
           <p class="old-price">$250.00</p>
           <div class="prod-purchase">
             <div class="prod-quantity">
-              <button class="min-button orange">-</button>
+              <button
+                class="min-button orange"
+                id="min-button"
+                onclick="minQ()"
+              >
+                -
+              </button>
               <input type="text" class="prod-quantity-input" value="0" />
-              <button class="plus-button orange">+</button>
+              <button
+                class="plus-button orange"
+                id="plus-button"
+                onclick="plusQ()"
+              >
+                +
+              </button>
             </div>
             <div class="prod-add-cart">
-              <button class="white">
+              <button class="white" onclick="addToCart()">
                 <img
                   src="assets/img/icon-cart.svg"
                   alt="icon-cart"
@@ -91,6 +123,48 @@
           </div>
         </div>
       </section>
+    </div>
+    <div class="modal-container dis-none" id="modal-container">
+      <div class="prod-images-modal">
+        <div class="modal-close">
+          <button class="close-button" id="close-button">&#10006;</button>
+        </div>
+        <div class="prod-hero-modal">
+          <div class="modal-navigate-left">
+            <span>&#65308;</span>
+          </div>
+          <div class="modal-navigate-right">
+            <span>&#65310;</span>
+          </div>
+          <img src="assets/img/image-product-1.jpg" alt="image-prod-1" />
+        </div>
+        <div class="prod-thumbs-modal">
+          <div class="thumb-modal-1">
+            <img
+              src="assets/img/image-product-1-thumbnail.jpg"
+              alt="img-prod-1-thumb"
+            />
+          </div>
+          <div class="thumb-modal-2">
+            <img
+              src="assets/img/image-product-2-thumbnail.jpg"
+              alt="img-prod-2-thumb"
+            />
+          </div>
+          <div class="thumb-modal-3">
+            <img
+              src="assets/img/image-product-3-thumbnail.jpg"
+              alt="img-prod-3-thumb"
+            />
+          </div>
+          <div class="thumb-modal-4">
+            <img
+              src="assets/img/image-product-4-thumbnail.jpg"
+              alt="img-prod-4-thumb"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <script src="assets/js/main.js"></script>
   </body>

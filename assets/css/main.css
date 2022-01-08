@@ -12,6 +12,15 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .white {
   color: var(--white);
 }
@@ -31,8 +40,16 @@
   color: var(--pink);
 }
 
-body {
-  background-color: var(--white);
+.bold {
+  font-weight: bold;
+}
+
+.dis-flex {
+  display: flex;
+}
+
+.dis-none {
+  display: none;
 }
 
 .body-container {
@@ -45,7 +62,6 @@ nav {
   color: var(--gray);
   font-weight: 600;
   display: flex;
-  padding: 2rem 0;
   align-items: center;
 }
 
@@ -57,27 +73,51 @@ nav {
 
 .nav-menu ul {
   display: flex;
+  margin: 0;
   margin-left: 1.5rem;
 }
 
 .nav-menu li {
+  padding: 3rem 0;
+  border-bottom: 4px solid var(--white);
   list-style: none;
   margin-right: 2rem;
 }
 
+.nav-menu li:hover {
+  color: var(--black);
+  border-bottom: 4px solid var(--orange);
+}
+
 .nav-profile {
   flex: 40%;
+  padding-right: 2rem;
   display: flex;
   justify-content: right;
   align-items: center;
 }
 
+.nav-profile img {
+  cursor: pointer;
+}
+
+.nav-profile img:nth-child(1):hover {
+  filter: brightness(0%);
+}
+
 .nav-profile img:nth-child(2) {
+  border: 2px solid var(--white);
+  border-radius: 50%;
   margin-left: 2rem;
   height: 3rem;
 }
 
+.nav-profile img:nth-child(2):hover {
+  border: 2px solid var(--orange);
+}
+
 hr {
+  margin: 0;
   border-top: 1px solid var(--lightgray);
 }
 
@@ -85,7 +125,7 @@ hr {
 
 section.main-content {
   display: flex;
-  height: 1000vh;
+  height: 90vh;
   padding: 4rem 0;
   justify-content: space-around;
 }
@@ -97,6 +137,10 @@ section.main-content {
 
 section.main-content img {
   border-radius: 10px;
+}
+
+.prod-hero-image {
+  cursor: pointer;
 }
 
 .prod-hero-image img {
@@ -113,10 +157,25 @@ section.main-content img {
   width: 100%;
 }
 
+.prod-thumbnails img:hover {
+  opacity: 0.5;
+}
+
 .prod-thumbnail-1,
 .prod-thumbnail-2,
 .prod-thumbnail-3,
 .prod-thumbnail-4 {
+  width: 6rem;
+  height: 96px;
+  border-radius: 12px;
+}
+
+.prod-thumbnail-1:hover,
+.prod-thumbnail-2:hover,
+.prod-thumbnail-3:hover,
+.prod-thumbnail-4:hover {
+  border: 2px solid var(--orange);
+  box-sizing: border-box;
   width: 6rem;
 }
 
@@ -129,7 +188,6 @@ section.main-content img {
   color: var(--orange);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  /* margin-bottom: 0; */
 }
 
 .prod-details h1 {
@@ -193,6 +251,11 @@ section.main-content img {
   cursor: pointer;
 }
 
+.min-button:hover,
+.plus-button:hover {
+  opacity: 0.6;
+}
+
 .min-button {
   padding-right: 1rem;
 }
@@ -216,8 +279,122 @@ section.main-content img {
   border: none;
   border-radius: 10px;
   box-shadow: 0 10px 20px 1px #ff9849;
+  cursor: pointer;
+}
+
+.prod-add-cart button:hover {
+  opacity: 0.6;
 }
 
 .button-cart-icon {
   margin-right: 1rem;
+  filter: brightness(200%) saturate(0%) contrast(121%);
+}
+
+/* Images Modal CSS */
+
+.modal-container {
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 145vh;
+  background-color: #1d1d1dbd;
+}
+
+.modal-container img {
+  border-radius: 10px;
+}
+
+.modal-close {
+  text-align: right;
+}
+
+.modal-close button {
+  color: var(--white);
+  background-color: inherit;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.modal-close button:hover {
+  color: var(--orange);
+}
+
+.prod-images-modal {
+  margin: 4rem 0;
+  width: 38%;
+  height: 70vh;
+}
+
+.prod-hero-modal {
+  width: 100%;
+}
+
+.prod-hero-modal img {
+  width: 100%;
+}
+
+.modal-navigate-left,
+.modal-navigate-right {
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 1.6rem;
+  font-weight: bold;
+  position: absolute;
+  padding: 0.6rem 0.9rem 0.6rem 0.8rem;
+  border-radius: 50%;
+  top: 55vh;
+  cursor: pointer;
+}
+
+.modal-navigate-left:hover,
+.modal-navigate-right:hover {
+  color: var(--orange);
+}
+
+.modal-navigate-left {
+  left: 29%;
+}
+
+.modal-navigate-right {
+  right: 29%;
+}
+
+.prod-thumbs-modal {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.prod-thumbs-modal img {
+  width: 100%;
+}
+
+.prod-thumbs-modal img:hover {
+  opacity: 0.6;
+}
+
+.thumb-modal-1,
+.thumb-modal-2,
+.thumb-modal-3,
+.thumb-modal-4 {
+  background-color: var(--white);
+  border-radius: 12px;
+  width: 6rem;
+  height: 6rem;
+}
+
+.thumb-modal-1:hover,
+.thumb-modal-2:hover,
+.thumb-modal-3:hover,
+.thumb-modal-4:hover {
+  border: 2px solid var(--orange);
+  box-sizing: border-box;
 }
