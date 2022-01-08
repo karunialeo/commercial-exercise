@@ -1,0 +1,73 @@
+:root {
+  --white: #ffffff;
+  --black: #23232a;
+  --gray: #a4a5a8;
+  --lightgray: #f7f8fd;
+  --orange: #ff7d1b;
+  --pink: #feefe2;
+}
+
+/* Navigation Bar CSS */
+
+nav {
+  color: var(--gray);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex: 60%;
+}
+
+.nav-menu ul {
+  display: flex;
+  margin: 0;
+  margin-left: 1.5rem;
+}
+
+.nav-menu li {
+  padding: 3rem 0;
+  border-bottom: 4px solid var(--white);
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.nav-menu li:hover {
+  color: var(--black);
+  border-bottom: 4px solid var(--orange);
+}
+
+.nav-profile {
+  flex: 40%;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.nav-profile img {
+  cursor: pointer;
+}
+
+.nav-profile img:nth-child(1):hover {
+  filter: brightness(0%);
+}
+
+.nav-profile img:nth-child(2) {
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  margin-left: 2rem;
+  height: 3rem;
+}
+
+.nav-profile img:nth-child(2):hover {
+  border: 2px solid var(--orange);
+}
+
+hr {
+  margin: 0;
+  border-top: 1px solid var(--lightgray);
+}

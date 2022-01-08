@@ -1,0 +1,116 @@
+:root {
+  --white: #ffffff;
+  --black: #23232a;
+  --gray: #a4a5a8;
+  --lightgray: #f7f8fd;
+  --orange: #ff7d1b;
+  --pink: #feefe2;
+}
+
+/* Images Modal CSS */
+
+.modal-container {
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 145vh;
+  background-color: #1d1d1dbd;
+}
+
+.modal-container img {
+  border-radius: 10px;
+}
+
+.modal-close {
+  text-align: right;
+}
+
+.modal-close button {
+  color: var(--white);
+  background-color: inherit;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.modal-close button:hover {
+  color: var(--orange);
+}
+
+.prod-images-modal {
+  margin: 4rem 0;
+  width: 38%;
+  height: 70vh;
+}
+
+.prod-hero-modal {
+  width: 100%;
+}
+
+.prod-hero-modal img {
+  width: 100%;
+}
+
+.modal-navigate-left,
+.modal-navigate-right {
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 1.6rem;
+  font-weight: bold;
+  position: absolute;
+  padding: 0.6rem 0.9rem 0.6rem 0.8rem;
+  border-radius: 50%;
+  top: 55vh;
+  cursor: pointer;
+}
+
+.modal-navigate-left:hover,
+.modal-navigate-right:hover {
+  color: var(--orange);
+}
+
+.modal-navigate-left {
+  left: 29%;
+}
+
+.modal-navigate-right {
+  right: 29%;
+}
+
+.prod-thumbs-modal {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.prod-thumbs-modal img {
+  width: 100%;
+}
+
+.prod-thumbs-modal img:hover {
+  opacity: 0.6;
+}
+
+.thumb-modal-1,
+.thumb-modal-2,
+.thumb-modal-3,
+.thumb-modal-4 {
+  background-color: var(--white);
+  border-radius: 12px;
+  width: 6rem;
+  height: 6rem;
+}
+
+.thumb-modal-1:hover,
+.thumb-modal-2:hover,
+.thumb-modal-3:hover,
+.thumb-modal-4:hover {
+  border: 2px solid var(--orange);
+  box-sizing: border-box;
+}
