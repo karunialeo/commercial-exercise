@@ -89,7 +89,7 @@ section.main-content {
   width: 38%;
 }
 
-section.main-content img {
+.prod-images img {
   border-radius: 10px;
 }
 
@@ -107,7 +107,7 @@ section.main-content img {
     padding: 0;
   }
 
-  section.main-content img {
+  .prod-images img {
     border-radius: 0;
   }
 }
@@ -133,6 +133,7 @@ section.main-content img {
   width: 6rem;
   height: 96px;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .prod-thumbnail-1:hover,
@@ -197,14 +198,15 @@ section.main-content img {
 }
 
 span.discount-rate {
-  display: flex;
-  align-items: center;
   color: var(--orange);
   background-color: var(--pink);
   font-size: 1.2rem;
-  margin-left: 1rem;
+  font-weight: bold;
   padding: 0 6px;
   border-radius: 10px;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .prod-details p.old-price {
@@ -238,41 +240,42 @@ span.discount-rate {
 }
 
 .prod-purchase .prod-quantity {
+  display: flex;
+  width: 11rem;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: space-around;
   background-color: var(--lightgray);
-  padding: 2px 20px;
-  padding-left: 15px;
+  padding: 0 10px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .min-button,
-.prod-quantity-input,
+.value,
 .plus-button {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+
+.prod-quantity-input {
+  width: 20px;
   font-weight: bold;
   background-color: var(--lightgray);
-  width: 25px;
   border: 0;
   margin: 0;
-}
-
-.min-button,
-.plus-button {
-  font-size: 1.5rem;
-  cursor: pointer;
 }
 
 .min-button:hover,
 .plus-button:hover {
   opacity: 0.6;
-}
-
-.min-button {
-  padding-right: 1rem;
+  cursor: pointer;
 }
 
 .prod-quantity-input {
   text-align: center;
-  font-size: 1rem;
-  padding: 10px;
+  font-size: 1.4rem;
 }
 
 .prod-add-cart {
@@ -280,11 +283,15 @@ span.discount-rate {
 }
 
 .prod-add-cart button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
   color: var(--white);
   background-color: var(--orange);
   font-size: 16px;
   font-weight: 600;
-  padding: 15px 70px;
+  padding: 15px 60px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 5px 10px 2px #ffae70;
@@ -300,23 +307,18 @@ span.discount-rate {
   filter: brightness(200%) saturate(0%) contrast(121%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .prod-purchase {
     display: block;
   }
 
   .prod-purchase .prod-quantity {
-    display: flex;
-    justify-content: space-around;
-    padding: 7px 0 13px;
     margin-bottom: 1.2rem;
-  }
-
-  .prod-quantity-input {
-    padding-top: 17px;
+    width: 100%;
   }
 
   .prod-add-cart {
+    width: 100%;
     margin: 0;
   }
 

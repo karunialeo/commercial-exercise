@@ -108,21 +108,15 @@
           </div>
           <div class="prod-purchase">
             <div class="prod-quantity">
-              <button
-                class="min-button orange"
-                id="min-button"
-                onclick="minQ()"
-              >
-                -
-              </button>
-              <input type="text" class="prod-quantity-input" value="0" />
-              <button
-                class="plus-button orange"
-                id="plus-button"
-                onclick="plusQ()"
-              >
-                +
-              </button>
+              <div class="min-button" onclick="minQ()">
+                <img src="assets/img/icon-minus.svg" alt="" />
+              </div>
+              <div class="value">
+                <input type="text" class="prod-quantity-input" value="0" />
+              </div>
+              <div class="plus-button" onclick="plusQ()">
+                <img src="assets/img/icon-plus.svg" alt="" />
+              </div>
             </div>
             <div class="prod-add-cart">
               <button class="white" onclick="addToCart()">
