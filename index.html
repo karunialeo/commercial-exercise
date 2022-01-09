@@ -25,8 +25,15 @@
     <div class="body-container">
       <nav>
         <div class="nav-menu">
-          <a href=""><img src="assets/img/logo.svg" alt="" /></a>
-          <ul>
+          <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+          </div>
+          <a href="" class="sneakers-logo">
+            <img src="assets/img/logo.svg" alt="" />
+          </a>
+          <ul class="nav-links">
             <li>
               <a href="">Collections</a>
             </li>
@@ -92,8 +99,13 @@
             Featuring a durable rubber outer sole, they'll withstand everything
             the weather can offer.
           </p>
-          <p class="new-price">$125.00<span class="discount-rate">50%</span></p>
-          <p class="old-price">$250.00</p>
+          <div class="prod-price">
+            <div class="price-and-discount">
+              <p class="new-price">$125.00</p>
+              <span class="discount-rate">50%</span>
+            </div>
+            <p class="old-price">$250.00</p>
+          </div>
           <div class="prod-purchase">
             <div class="prod-quantity">
               <button
@@ -126,18 +138,16 @@
         </div>
       </section>
     </div>
+    <div class="image-navigator dis-none">
+      <div class="navigate-left"><div class="nav-icon-left"></div></div>
+      <div class="navigate-right"><div class="nav-icon-right"></div></div>
+    </div>
     <div class="modal-container dis-none" id="modal-container">
       <div class="prod-images-modal">
         <div class="modal-close">
           <button class="close-button" id="close-button">&#10006;</button>
         </div>
         <div class="prod-hero-modal">
-          <div class="modal-navigate-left">
-            <span>&#65308;</span>
-          </div>
-          <div class="modal-navigate-right">
-            <span>&#65310;</span>
-          </div>
           <img src="assets/img/image-product-1.jpg" alt="image-prod-1" />
         </div>
         <div class="prod-thumbs-modal">
@@ -169,5 +179,6 @@
       </div>
     </div>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </body>
 </html>

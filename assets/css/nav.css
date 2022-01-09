@@ -16,26 +16,32 @@ nav {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 10px 0;
+  }
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
   flex: 60%;
 }
 
-.nav-menu ul {
+.nav-links {
   display: flex;
   margin: 0;
   margin-left: 1.5rem;
 }
 
-.nav-menu li {
+.nav-links li {
   padding: 3rem 0;
   border-bottom: 4px solid var(--white);
   list-style: none;
   margin-right: 2rem;
 }
 
-.nav-menu li:hover {
+.nav-links li:hover {
   color: var(--black);
   border-bottom: 4px solid var(--orange);
 }
@@ -70,4 +76,92 @@ nav {
 hr {
   margin: 0;
   border-top: 1px solid var(--lightgray);
+}
+
+/* Responsive Burger Nav */
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  background-color: var(--black);
+  width: 22px;
+  height: 3px;
+  margin: 4px 10px;
+  transition: all 0.5s ease;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line-1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
+.toggle .line-2 {
+  opacity: 0;
+}
+.toggle .line-3 {
+  transform: rotate(45deg) translate(-4px, -6px);
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .sneakers-logo {
+    margin-left: 5px;
+  }
+  .nav-links {
+    margin-left: 0;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 50%;
+    height: 90vh;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: 7;
+  }
+
+  .nav-link {
+    margin-left: 0;
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+    border-bottom: none;
+    opacity: 0;
+  }
+
+  .nav-links li:hover {
+    border-bottom: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-profile {
+    padding-right: 10px;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
 }

@@ -70,17 +70,22 @@ function plusQ() {
     quantityInput.value++
 }
 
-const modalContainer = document.getElementById("modal-container");
-const heroImage = document.getElementById("prod-hero-image");
-const closeButton = document.getElementById("close-button");
+const modalContainer = document.getElementById("modal-container")
+const heroImage = document.getElementById("prod-hero-image")
+const closeButton = document.getElementById("close-button")
+const imgNav = document.querySelector('.image-navigator')
 
 heroImage.addEventListener("click", function () {
-    modalContainer.classList.toggle("dis-none");
-    modalContainer.classList.toggle("dis-flex");
+    if (screen.width > 768) {
+        modalContainer.classList.toggle("dis-none");
+        modalContainer.classList.toggle("dis-flex");
+        imgNav.classList.toggle('dis-none')
+    }
 });
 
 closeButton.addEventListener("click", function () {
     modalContainer.classList.toggle("dis-flex");
     modalContainer.classList.toggle("dis-none");
+    imgNav.classList.toggle('dis-none')
 });
 

@@ -12,12 +12,12 @@
 .modal-container {
   justify-content: center;
   text-align: center;
-  z-index: 10;
+  z-index: 5;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 145vh;
+  height: 123.2vh;
   background-color: #1d1d1dbd;
 }
 
@@ -54,32 +54,6 @@
 
 .prod-hero-modal img {
   width: 100%;
-}
-
-.modal-navigate-left,
-.modal-navigate-right {
-  color: var(--black);
-  background-color: var(--white);
-  font-size: 1.6rem;
-  font-weight: bold;
-  position: absolute;
-  padding: 0.6rem 0.9rem 0.6rem 0.8rem;
-  border-radius: 50%;
-  top: 55vh;
-  cursor: pointer;
-}
-
-.modal-navigate-left:hover,
-.modal-navigate-right:hover {
-  color: var(--orange);
-}
-
-.modal-navigate-left {
-  left: 29%;
-}
-
-.modal-navigate-right {
-  right: 29%;
 }
 
 .prod-thumbs-modal {
