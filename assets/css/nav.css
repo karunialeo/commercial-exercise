@@ -18,15 +18,16 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
-    padding: 10px 0;
-    width: 100vw;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  flex: 60%;
+  flex: 50%;
 }
 
 .nav-links {
@@ -48,7 +49,7 @@ nav {
 }
 
 .nav-profile {
-  flex: 40%;
+  flex: 50%;
   padding-right: 2rem;
   display: flex;
   justify-content: right;
@@ -90,7 +91,8 @@ hr {
   background-color: var(--black);
   width: 22px;
   height: 3px;
-  margin: 4px 10px;
+  margin: 4px 0;
+  margin-right: 10px;
   transition: all 0.5s ease;
 }
 
@@ -159,12 +161,8 @@ hr {
 
 @media screen and (max-width: 768px) {
   .nav-profile {
-    padding-right: 1vw;
+    padding-right: 0;
   }
-}
-
-.nav-profile img:nth-child(2) {
-  margin-left: 5vw;
 }
 
 .nav-active {

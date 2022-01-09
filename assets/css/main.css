@@ -94,6 +94,7 @@ section.main-content {
 }
 
 .prod-hero-image {
+  position: relative;
   cursor: pointer;
 }
 
@@ -109,6 +110,10 @@ section.main-content {
 
   .prod-images img {
     border-radius: 0;
+  }
+
+  .prod-hero-image {
+    cursor: unset;
   }
 }
 
@@ -126,23 +131,37 @@ section.main-content {
   opacity: 0.5;
 }
 
-.prod-thumbnail-1,
-.prod-thumbnail-2,
-.prod-thumbnail-3,
-.prod-thumbnail-4 {
+[class^="prod-thumbnail-"] {
   width: 6rem;
-  height: 96px;
+  height: 6rem;
   border-radius: 12px;
   cursor: pointer;
 }
 
-.prod-thumbnail-1:hover,
-.prod-thumbnail-2:hover,
-.prod-thumbnail-3:hover,
-.prod-thumbnail-4:hover {
+[class^="prod-thumbnail-"]:hover {
   border: 2px solid var(--orange);
   box-sizing: border-box;
   width: 6rem;
+}
+
+@media screen and (max-width: 1199px) {
+  [class^="prod-thumbnail-"],
+  [class^="prod-thumbnail-"]:hover {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .prod-thumbnails {
+    margin-top: 0.6rem;
+  }
+
+  [class^="prod-thumbnail-"],
+  [class^="prod-thumbnail-"]:hover {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -286,12 +305,12 @@ span.discount-rate {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 15rem;
   height: 3.5rem;
   color: var(--white);
   background-color: var(--orange);
   font-size: 16px;
   font-weight: 600;
-  padding: 15px 60px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 5px 10px 2px #ffae70;
@@ -307,7 +326,7 @@ span.discount-rate {
   filter: brightness(200%) saturate(0%) contrast(121%);
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
   .prod-purchase {
     display: block;
   }
@@ -354,7 +373,7 @@ span.discount-rate {
   position: absolute;
   padding: 1rem;
   border-radius: 50%;
-  top: 55vh;
+  top: 45%;
   cursor: pointer;
 }
 
@@ -364,21 +383,16 @@ span.discount-rate {
 }
 
 .navigate-left {
-  left: 29%;
+  left: -6%;
 }
 
 .navigate-right {
-  right: 29%;
+  right: -6%;
 }
 
 @media screen and (max-width: 768px) {
   .image-navigator {
     display: flex;
-  }
-
-  .navigate-left,
-  .navigate-right {
-    top: 35vh;
   }
 
   .navigate-left {

@@ -54,8 +54,8 @@
 }
 
 .cart-status p {
-  color: var(--black);
-  font-weight: 600;
+  color: rgb(73, 73, 73);
+  font-weight: 700;
 }
 
 .prod-cart-container {

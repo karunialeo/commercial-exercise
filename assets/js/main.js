@@ -76,16 +76,70 @@ const closeButton = document.getElementById("close-button")
 const imgNav = document.querySelector('.image-navigator')
 
 heroImage.addEventListener("click", function () {
-    if (screen.width > 768) {
+    if (window.innerWidth > 768) {
         modalContainer.classList.toggle("dis-none");
         modalContainer.classList.toggle("dis-flex");
-        imgNav.classList.toggle('dis-none')
     }
 });
 
 closeButton.addEventListener("click", function () {
     modalContainer.classList.toggle("dis-flex");
     modalContainer.classList.toggle("dis-none");
-    imgNav.classList.toggle('dis-none')
 });
 
+const heroMain = heroImage.querySelector('.hero-main')
+const navLeft = heroImage.querySelector('.navigate-left')
+const navRight = heroImage.querySelector('.navigate-right')
+
+const navModLeft = modalContainer.querySelector('.navigate-left')
+const navModRight = modalContainer.querySelector('.navigate-right')
+const modalImage = modalContainer.querySelector('.modal-hero-image')
+
+function navigator() {
+    let i = 1
+    navLeft.addEventListener('click', () => {
+        if(i > 1 && i <= 4) {
+            i--
+            heroMain.innerHTML = `<img src="assets/img/image-product-${i}.jpg" alt="image-prod-${i}" />`
+        } else if(i == 1) {
+            i = 4
+            heroMain.innerHTML = `<img src="assets/img/image-product-${i}.jpg" alt="image-prod-${i}" />`
+        }
+    })
+    
+    navRight.addEventListener('click', () => {
+        if(i >= 1 && i < 4) {
+            i++
+            heroMain.innerHTML = `<img src="assets/img/image-product-${i}.jpg" alt="image-prod-${i}" />`
+        } else if(i == 4) {
+            i = 1
+            heroMain.innerHTML = `<img src="assets/img/image-product-${i}.jpg" alt="image-prod-${i}" />`
+        }
+    })
+}
+
+function modalNavigator() {
+    let i = 1  
+    navModLeft.addEventListener('click', () => {
+        if(i > 1 && i <= 4) {
+            i--
+            modalImage.innerHTML = `<img src="assets/img/image-product-${i}.jpg" alt="image-prod-${i}" />`
+        } else if(i == 1) {
+            i = 4
+            modalImage.innerHTML = `<img src="assets/img/image-product-${i}.jpg" alt="image-prod-${i}" />`
+        }
+    })
+    
+    navModRight.addEventListener('click', () => {
+        if(i >= 1 && i < 4) {
+            i++
+            modalImage.innerHTML = `<img src="assets/img/image-product-${i}.jpg" alt="image-prod-${i}" />`
+        } else if(i == 4) {
+            i = 1
+            modalImage.innerHTML = `<img src="assets/img/image-product-${i}.jpg" alt="image-prod-${i}" />`
+        }
+    })
+}
+
+navigator()
+modalNavigator()

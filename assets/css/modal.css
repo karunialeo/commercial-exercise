@@ -21,6 +21,24 @@
   background-color: #1d1d1dbd;
 }
 
+@media screen and (max-width: 1199px) {
+  .modal-container {
+    height: 133.5vh;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .modal-container {
+    height: 139.5vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-container {
+    display: none;
+  }
+}
+
 .modal-container img {
   border-radius: 10px;
 }
@@ -49,6 +67,7 @@
 }
 
 .prod-hero-modal {
+  position: relative;
   width: 100%;
 }
 
@@ -71,10 +90,7 @@
   opacity: 0.6;
 }
 
-.thumb-modal-1,
-.thumb-modal-2,
-.thumb-modal-3,
-.thumb-modal-4 {
+[class^="thumb-modal-"] {
   background-color: var(--white);
   border-radius: 12px;
   width: 6rem;
@@ -82,10 +98,23 @@
   cursor: pointer;
 }
 
-.thumb-modal-1:hover,
-.thumb-modal-2:hover,
-.thumb-modal-3:hover,
-.thumb-modal-4:hover {
+[class^="thumb-modal-"]:hover {
   border: 2px solid var(--orange);
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 1199px) {
+  [class^="thumb-modal-"],
+  [class^="thumb-modal-"]:hover {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  [class^="thumb-modal-"],
+  [class^="thumb-modal-"]:hover {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
 }
