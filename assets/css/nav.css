@@ -134,7 +134,7 @@ hr {
     flex-direction: column;
     transform: translateX(-100%);
     transition: transform 0.5s ease;
-    z-index: 7;
+    z-index: 8;
   }
 
   .nav-link {
@@ -158,8 +158,12 @@ hr {
 
 @media screen and (max-width: 768px) {
   .nav-profile {
-    padding-right: 10px;
+    padding-right: 1vw;
   }
+}
+
+.nav-profile img:nth-child(2) {
+  margin-left: 5vw;
 }
 
 .nav-active {

@@ -15,16 +15,16 @@
   border-radius: 10px;
   position: absolute;
   top: 15%;
-  z-index: 10;
+  z-index: 7;
   right: 5%;
   width: 21rem;
 }
 
 @media screen and (max-width: 768px) {
   .cart-box-container {
-    width: 23rem;
-    right: 3%;
-    box-shadow: 0 13px 20px 5px rgb(37, 37, 37);
+    width: 95vw;
+    right: 2%;
+    box-shadow: 0 13px 20px rgb(75, 75, 75);
   }
 }
 
@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 768px) {
   .cart-status {
-    height: 35vh;
+    height: 28vh;
   }
 }
 
