@@ -50,7 +50,6 @@ nav {
 
 .nav-profile {
   flex: 50%;
-  padding-right: 2rem;
   display: flex;
   justify-content: right;
   align-items: center;
@@ -156,12 +155,6 @@ hr {
 
   .burger {
     display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .nav-profile {
-    padding-right: 0;
   }
 }
 
