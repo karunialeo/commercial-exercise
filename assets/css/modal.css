@@ -69,6 +69,7 @@
 .prod-hero-modal {
   position: relative;
   width: 100%;
+  min-height: 520px;
 }
 
 .prod-hero-modal img {
