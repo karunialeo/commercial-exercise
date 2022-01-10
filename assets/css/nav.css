@@ -53,6 +53,7 @@ nav {
 .nav-profile {
   flex: 30%;
   display: flex;
+  flex-direction: row;
   justify-content: right;
   align-items: center;
 }
@@ -157,6 +158,13 @@ hr {
 
   .burger {
     display: block;
+  }
+  .nav-profile {
+    flex: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
   }
 }
 
