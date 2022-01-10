@@ -38,11 +38,15 @@
 
 .cart-status {
   height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
   .cart-status {
-    height: 28vh;
+    height: 30vh;
   }
 }
 
